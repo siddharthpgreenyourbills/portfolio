@@ -210,7 +210,6 @@ footer {
 /* DIFFERENT SIZES */
 .floating-icons img:nth-child(1) { left: 10%; width: 80px; animation-duration: 25s; }
 .floating-icons img:nth-child(2) { left: 30%; width: 60px; animation-duration: 18s; }
-.floating-icons img:nth-child(3) { left: 50%; width: 90px; animation-duration: 22s; }
 .floating-icons img:nth-child(4) { left: 70%; width: 65px; animation-duration: 20s; }
 .floating-icons img:nth-child(5) { left: 85%; width: 75px; animation-duration: 26s; }
 
