@@ -32,6 +32,7 @@ header h1 {
     font-size: 2.8rem;
     color: var(--primary);
     letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 255, 195, 0.6);
 }
 
 header p {
@@ -39,6 +40,7 @@ header p {
     margin-top: 10px;
 }
 
+/* LINKS */
 .links {
     margin-top: 20px;
 }
@@ -64,6 +66,8 @@ header p {
 .links a:hover::after {
     width: 100%;
 }
+
+/* TYPING EFFECT */
 .typing {
     color: var(--primary);
     margin-top: 10px;
@@ -72,11 +76,17 @@ header p {
     white-space: nowrap;
     overflow: hidden;
 }
+
 /* SECTIONS */
 section {
     max-width: 900px;
     margin: auto;
     padding: 50px 20px;
+}
+
+section:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 195, 0.05);
+    transition: 0.3s;
 }
 
 h2 {
@@ -116,21 +126,49 @@ h2 {
 .project:hover {
     transform: translateY(-5px);
     border-color: var(--primary);
-    box-shadow: 0 0 15px rgba(0, 255, 195, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 195, 0.25);
 }
 
 .project h3 {
     color: var(--secondary);
 }
 
-.project a {
-    color: var(--primary);
-    text-decoration: none;
+/* AWARDS */
+.awards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-/* LIST */
-ul li {
-    margin-bottom: 10px;
+.award-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(0, 255, 195, 0.2);
+}
+
+.award-card .icon {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.award-card h3 {
+    color: var(--secondary);
+}
+
+.award-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
 }
 
 /* FOOTER */
@@ -141,7 +179,7 @@ footer {
     color: var(--muted);
 }
 
-/* SCROLLBAR (nice hacker feel) */
+/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -149,18 +187,6 @@ footer {
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
     border-radius: 10px;
-}
-
-/* SUBTLE GLOW EFFECT */
-header h1 {
-    text-shadow: 0 0 8px rgba(0, 255, 195, 0.5);
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
 }
 
 /* FLOATING DEVOPS ICONS */
@@ -176,17 +202,19 @@ header h1 {
 
 .floating-icons img {
     position: absolute;
-    width: 40px;
-    opacity: 0.08;
+    opacity: 0.12;
     animation: float 20s linear infinite;
+    filter: drop-shadow(0 0 8px rgba(0,255,195,0.4));
 }
 
-.floating-icons img:nth-child(1) { left: 10%; animation-duration: 25s; }
-.floating-icons img:nth-child(2) { left: 30%; animation-duration: 18s; }
-.floating-icons img:nth-child(3) { left: 50%; animation-duration: 22s; }
-.floating-icons img:nth-child(4) { left: 70%; animation-duration: 20s; }
-.floating-icons img:nth-child(5) { left: 85%; animation-duration: 26s; }
+/* DIFFERENT SIZES */
+.floating-icons img:nth-child(1) { left: 10%; width: 80px; animation-duration: 25s; }
+.floating-icons img:nth-child(2) { left: 30%; width: 60px; animation-duration: 18s; }
+.floating-icons img:nth-child(3) { left: 50%; width: 90px; animation-duration: 22s; }
+.floating-icons img:nth-child(4) { left: 70%; width: 65px; animation-duration: 20s; }
+.floating-icons img:nth-child(5) { left: 85%; width: 75px; animation-duration: 26s; }
 
+/* FLOAT ANIMATION */
 @keyframes float {
     from {
         transform: translateY(100vh) rotate(0deg);
@@ -196,8 +224,15 @@ header h1 {
     }
 }
 
-/* FIX layering */
+/* FIX CONTENT ABOVE BACKGROUND */
 header, section, footer {
     position: relative;
     z-index: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
 }
