@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script>
+const text = "Deploying scalable systems | Automating everything | Monitoring all the things...";
+let i = 0;
 
+function typeEffect() {
+    if (i < text.length) {
+        document.querySelector(".typing").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 40);
+    }
+}
+
+typeEffect();
+</script>
 <header>
     <h1>Siddharth Paliwal</h1>
     <p>Senior DevOps Engineer | AWS | Kubernetes | Terraform | CI/CD</p>
