@@ -273,3 +273,77 @@ header, section, footer {
     color: var(--primary);
     text-decoration: none;
 }
+
+/* ================= CERTIFICATIONS ================= */
+
+#certifications {
+    text-align: center;
+}
+
+.cert-summary {
+    color: var(--muted);
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Grid layout (matches your awards/articles style) */
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Card style (aligned with .project & .award-card) */
+.cert-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(0, 255, 195, 0.25);
+}
+
+/* Title */
+.cert-card h3 {
+    color: var(--secondary);
+    margin: 10px 0;
+}
+
+/* Text */
+.cert-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Links */
+.cert-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cert-card a:hover {
+    text-decoration: underline;
+}
+
+/* Badge (PNG logos) */
+.badge {
+    width: 70px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 6px rgba(0,255,195,0.4));
+}
+
+/* JPG Certificate preview */
+.cert-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+}
